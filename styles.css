@@ -1,0 +1,40 @@
+#nixonBox{
+    position:relative;
+    background-color: red;
+    width: 250px;
+    height: 250px;
+    border: black solid 2px;
+    text-align: center;
+    font-size: 50px;
+    transition: 2s all;
+    transform:translate(-50%,-50%);
+}
+#nixonBox p{
+    font-size: 50px;
+    padding-top: 8%;
+    margin: 0%;
+}
+#governBox{
+    position: relative;
+    background-color: blue;
+    width: 250px;
+    height: 250px;
+    border: black solid 2px;
+    text-align: center;
+    transition: 3s all;
+    float: right;
+}
+#governBox p{
+    font-size: 50px;
+    padding-top: 8%;
+    margin: 0%;
+}
+#textBox{
+    position: relative;
+    text-align: center;
+    font-size: 50px;
+    transition: 10s all;
+}
+body{
+    transition: 10s all;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote for Nixon</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div id="nixonBox" onmouseover="nixonChange()" onmouseout="nixonNormal()"> 
+        <p>Nixon</p>
+        <img src="nixonClip.jfif" alt="Nixon :)" id="nixonImg" width="150px" height="150px">
+    </div>
+    <div id="textBox">
+        <p>Click on a box to vote!</p>
+        <p>Nixon: </p>
+        <p>McGovern: </p>
+    </div>
+    <div onmouseover="governChange()" onmouseout="governNormal()"id="governBox">
+        <p id="governText">McGovern</p>
+        <img src="mcGovernClip.jfif" alt="McHGovern :(" id="governImg" width="150px" height="150px">
+    </div>
+   <script src="script.js"></script> 
+</body>
+</html>
