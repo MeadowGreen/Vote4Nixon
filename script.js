@@ -1,23 +1,29 @@
 let govern = document.getElementById('governBox');
 let nixon = document.getElementById('nixonBox');
+let nixonImg = document.getElementById('nixonImg');
 let text = document.getElementById('textBox');
-let nixonCount = document.getElementById('nixonCount');
-let governCount = document.getElementById('governCount');
+let body = document.getElementById('body');
+let votedText = document.getElementById('votedText');
 
-nixon.addEventListener("click", () =>{
-    nixonCount.innerHTML ++ ;
-}); 
-
-govern.addEventListener("click", () =>{
-    nixonCount.innerHTML ++ ;
-});
+function voted(){
+    nixon.removeEventListener("click", voted);
+    govern.removeEventListener("click", voted);
+    for(let i = 0; i < 1; i++){
+        let votedNixon = document.createElement("p");
+        text.appendChild(votedNixon);
+        votedNixon.innerHTML = "Nixon";
+        votedNixon.style.fontWeight = "bold";
+    };
+    for(let i = 0; i < 5; i++){
+        let nixonWon = document.createElement("img");
+        body.appendChild(nixonWon);
+        nixonWon.src = "nixonCursor.png";
+        nixonWon.style.paddingLeft = "4%";
+    }
+};
 
 function loading(){
     alert("Don't forget, Nixon is great!");
-};
-
-function voteNixon(){
-    alert("Vote for Nixon! (He's the best)");
 };
 
 function governChange(){
@@ -34,7 +40,11 @@ function governNormal(){
 };
 
 const follow = (e) =>{
-  nixon.style.left = e.pageX + 'px';
-  nixon.style.top = e.pageY + 'px';
+  nixon.style.left = e.clientX + 'px';
+  nixon.style.top = e.clientY + 'px';
 };
 document.addEventListener('mousemove', follow);
+
+nixon.addEventListener('contextmenu', function(){
+    this.style.cursor = "url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/happy.png'), not-allowed";
+});

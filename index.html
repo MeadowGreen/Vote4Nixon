@@ -7,20 +7,21 @@
     <title>Vote for Nixon</title>
     <link href="styles.css" rel="stylesheet">
 </head>
-<body onload="loading()" oncontextmenu="voteNixon()" >
-    <div id="nixonBox"> 
+<body onload="loading()" id="body">
+    <div id="textBox">
+        <p>Click on a box to vote!</p>
+        <p> You voted for:</p>
+        <div onmouseover="governChange()" onmouseout="governNormal()" onclick="voted()"" id="governBox">
+            <p id="governText">McGovern</p>
+            <img src="mcGovernClip.jfif" alt="McGovern :(" id="governImg" width="150px" height="150px">
+        </div>
+    </div>
+    <div id="nixonBox" onclick="voted()"> 
         <p>Nixon</p>
         <img src="nixonSmile.jfif" alt="Nixon :)" id="nixonImg" width="150px" height="150px">
     </div>
-    <div onmouseover="governChange()" onmouseout="governNormal()" id="governBox">
-        <p id="governText">McGovern</p>
-        <img src="mcGovernClip.jfif" alt="McHGovern :(" id="governImg" width="150px" height="150px">
-    </div>
-    <div id="textBox">
-        <p>Click on a box to vote!</p>
-        <p>Nixon: <span id="nixonCount"></span></p>
-        <p id="governCountText">McGovern: <span id="governCount"></span></p>
-    </div>
+    
+    
    <script src="script.js"></script> 
 </body>
 </html>
